@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="hokkaidoCupcake">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/hokkaido-cupcake.JPG" id="expandedImg_hokkaidoCupcake" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/hokkaido-cupcake.JPG" class="thumbnail" onclick="expandImg(this, 'hokkaidoCupcake')">
+                    <img src="./source/products/hokkaido-cupcake2.JPG" class="thumbnail" onclick="expandImg(this, 'hokkaidoCupcake')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_hokkaidoCupcake" onclick="showTab('about', this, 'hokkaidoCupcake')">about</h1>
+                    <h1 id="ingredientTab_hokkaidoCupcake" onclick="showTab('ingredient', this, 'hokkaidoCupcake')">ingredients</h1>
+                    <h1 id="detailsTab_hokkaidoCupcake" onclick="showTab('details', this, 'hokkaidoCupcake')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_hokkaidoCupcake">
+                        <p><span class="about-main">Hokkaido Cupcake, </span>Experience the heavenly taste of our Hokkaido Cupcake, a delightful treat inspired by the flavors of Japan. Each cupcake is a perfect balance of soft, fluffy cake and a creamy filling. Ideal for any occasion, our Hokkaido Cupcake in the normal size is a true delight for your taste buds.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_hokkaidoCupcake">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Cake Base: </span>Soft and fluffy cake baked to perfection.</li>
+                            <li><span class="ing">Cream Filling: </span>Smooth and creamy filling for a delightful surprise.</li>
+                            <li><span class="ing">Sugar: </span>Subtle sweetness to enhance the overall taste.</li>
+                            <li><span class="ing">Eggs: </span>Fresh and high-quality eggs for structure and moisture.</li>
+                            <li><span class="ing">Flour: </span>High-quality flour for the perfect cake texture.</li>
+                            <li><span class="ing">Butter: </span>Rich and premium butter for added flavor.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Infuses a delightful aroma into the cupcake.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_hokkaidoCupcake">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>Normal
+                                    <ul>
+                                        <li>description: a standard-sized cupcake for a delightful and satisfying experience.</li>
+                                        <li>serving: a box with normal-sized Hokkaido Cupcakes.</li>
+                                        <li>ideal for: indulging in a sweet treat or sharing with friends and family.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in a cool, dry place.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy, eggs, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the cupcake's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Hokkaido Cupcakes are carefully crafted, ready to be the highlight of your dessert table or a delightful gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateSize()">
+            <p>cupcakes</p>
+            <h1>hokkaido cupcake</h1>
+            <h2>RM<span id="price_hokkaidoCupcake"></span></h2>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="normal_hokkaidoCupcake" value="normal" name="size" onchange="updatePrice('hokkaidoCupcake')">
+                <label for="normal_hokkaidoCupcake">normal</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

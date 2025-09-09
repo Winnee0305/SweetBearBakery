@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="cover">
+    <div id="functionalities">
+
+    </div>
+
+    <div class="contacts-box">
+        <div class="left-container">
+            <div class="com-container">
+                <p>address</p>
+                5, Jalan Universiti<br>Bandar Sunway<br>47500 Petaling Jaya, Selangor<br>Malaysia
+            </div>
+            <div class="com-container">
+                <p>business hour</p>
+                <div class="time-container">
+                    <div>
+                        mon-fri<br>sat-sun
+                    </div>
+                    <div>
+                        10:00am - 08:00pm<br>08:00am - 10:00pm
+                    </div>
+                </div>
+            </div>
+            <div class="com-container">
+                <p>contact us</p>
+                <ul class="phone-mail">
+                    <li>
+                        <img src="./source/phone.png" class="icon">
+                        012-3456789
+                    </li>
+                    <li>    
+                        <img src="./source/mail.png" class="icon">
+                        sweet.bear@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form method="get" class="contact-form" onsubmit="return validateContactForm()">
+            <h1>leave a message</h1>
+            <h2>got question about our delightful desserts?</h2>
+            <h2>contact <span class="strong">sweet bear</span> for all the answer !</h2>
+            <div class="ques-container">
+                <p>firstname</p>
+                <input type="text" class="userinput" name="firstname" id="contact_firstname">
+                <p id="contact_invalid_firstname">**please enter a valid firstname</p>
+            </div>
+            <div class="ques-container">
+                <p>lastname</p>
+                <input type="text" class="userinput" name="lastname" id="contact_lastname">
+                <p id="contact_invalid_lastname">**please enter a valid lastname</p>
+            </div>
+            <div class="ques-container">
+                <p>email address</p>
+                <input type="email" class="userinput" name="email" id="contact_email">
+                <p id="contact_invalid_email">**please enter a valid email address</p>
+            </div>
+            <div class="ques-container">
+                <p>feeback subject</p>
+                <select size="1" name="contact-subject" class="userinput" id="contact_subject">
+                    <option value="select">selcect one contact subject</option>
+                    <option value="general">general inquiry</option>
+                    <option value="order">order assistance</option>
+                    <option value="producto">product information request</option>
+                    <option value="delivery">delivery issues</option>
+                    <option value="billing-payment">billing and payment</option>
+                    <option value="cancellation">cancellation request</option>
+                    <option value="complaint">complaint</option>
+                    <option value="partnership">partnership opportunities</option>
+                    <option value="others">others</option>
+                </select>
+                <p id="contact_invalid_subject">**please select a feedback subject</p>
+            </div>
+            <div class="ques-container">
+                <p>message</p>
+                <textarea class="userinput" name="message" id="contact_message"></textarea>
+                <p id="contact_invalid_message">**please fill in your message</p>
+            </div>
+            <button type="submit" class="submit-button">submit form</button>
+        </form>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

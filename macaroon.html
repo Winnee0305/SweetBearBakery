@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="macaroon">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/macaroons.JPG" id="expandedImg_macaroon" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/macaroons.JPG" class="thumbnail" onclick="expandImg(this, 'macaroon')">
+
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_macaroon" onclick="showTab('about', this, 'macaroon')">about</h1>
+                    <h1 id="ingredientTab_macaroon" onclick="showTab('ingredient', this, 'macaroon')">ingredients</h1>
+                    <h1 id="detailsTab_macaroon" onclick="showTab('details', this, 'macaroon')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_macaroon">
+                        <p><span class="about-main">French Macarons, </span>Indulge in the delicate elegance of our French Macarons, a delightful meringue-based treat with a luscious filling. Available in mini and normal sizes, each macaron is a perfect balance of crispiness and chewiness, creating a heavenly experience for your taste buds.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_macaroon">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Almond Flour: </span>Finely ground for a smooth and delicate texture.</li>
+                            <li><span class="ing">Powdered Sugar: </span>Sifted to perfection for the macaron shells.</li>
+                            <li><span class="ing">Egg Whites: </span>Whipped to stiff peaks for the meringue.</li>
+                            <li><span class="ing">Granulated Sugar: </span>For sweetness and structure of the meringue.</li>
+                            <li><span class="ing">Buttercream or Ganache Filling: </span>Rich and flavorful filling between the macaron shells.</li>
+                            <li><span class="ing">Food Coloring (optional): </span>For a pop of color and visual appeal.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_macaroon">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>Mini
+                                    <ul>
+                                        <li>description: bite-sized macarons perfect for a dainty and delightful treat.</li>
+                                        <li>serving: a box with mini-sized French Macarons.</li>
+                                        <li>ideal for: tea parties, events, or as an elegant addition to a dessert platter.</li>
+                                    </ul>
+                                </li>
+                                <li>Normal
+                                    <ul>
+                                        <li>description: standard-sized macarons for a classic and satisfying macaron experience.</li>
+                                        <li>serving: a box with normal-sized French Macarons.</li>
+                                        <li>ideal for: indulging in a sweet treat or sharing with friends and family.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in a cool, dry place.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains almonds and eggs. may contain traces of dairy.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the macaron's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our French Macarons are meticulously crafted, ready to add a touch of sophistication to your gatherings or make a delightful gift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateFlavour()">
+            <p>macaroons</p>
+            <h1>macaroon</h1>
+            <h2>RM<span id="price_macaroon"></span></h2>
+            <h3>flavour</h3>
+            <div class="option-container">
+                <input type="radio" id="vanilla_macaroon" value="vanilla" name="flavour">
+                <label for="vanilla_macaroon">vanilla</label>
+                <input type="radio" id="chocolate_macaroon" value="chocolate" name="flavour">
+                <label for="chocolate_macaroon">chocolate</label>
+                <input type="radio" id="lemon_macaroon" value="lemon" name="flavour">
+                <label for="lemon_macaroon">lemon</label>
+                <input type="radio" id="raspberry_macaroon" value="raspberry" name="flavour">
+                <label for="raspberry_macaroon">raspberry</label>
+                <input type="radio" id="strawberry_macaroon" value="strawberry" name="flavour">
+                <label for="strawberry_macaroon">strawberry</label>
+                <input type="radio" id="coffee_macaroon" value="coffee" name="flavour">
+                <label for="coffee_macaroon">coffee</label>
+                <input type="radio" id="rose_macaroon" value="rose" name="flavour">
+                <label for="rose_macaroon">rose</label>
+                <input type="radio" id="caramel_macaroon" value="caramel" name="flavour">
+                <label for="caramel_macaroon">caramel</label>
+                <input type="radio" id="lavender_macaroon" value="lavender" name="flavour">
+                <label for="lavender_macaroon">lavender</label>
+                <input type="radio" id="matcha_macaroon" value="matcha" name="flavour">
+                <label for="matcha_macaroon">matcha</label>
+                <input type="radio" id="earl grey_macaroon" value="earl grey" name="flavour">
+                <label for="earl grey_macaroon">earl grey</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_macaroon" value="mini" name="size" onchange="updatePrice('macaroon')">
+                <label for="mini_macaroon">mini</label>
+                <input type="radio" id="normal_macaroon" value="normal" name="size" onchange="updatePrice('macaroon')">
+                <label for="normal_macaroon">normal</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_flavour">**please choose a flavour</p>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

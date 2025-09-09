@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="creamPuff">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/cream-puff.JPG" id="expandedImg_creamPuff" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/cream-puff.JPG" class="thumbnail" onclick="expandImg(this, 'creamPuff')">
+                    <img src="./source/products/cream-puff2.JPG" class="thumbnail" onclick="expandImg(this, 'creamPuff')">
+                    <img src="./source/products/cream-puff3.JPG" class="thumbnail" onclick="expandImg(this, 'creamPuff')">
+                    <img src="./source/products/cream-puff4.JPG" class="thumbnail" onclick="expandImg(this, 'creamPuff')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_creamPuff" onclick="showTab('about', this, 'creamPuff')">about</h1>
+                    <h1 id="ingredientTab_creamPuff" onclick="showTab('ingredient', this, 'creamPuff')">ingredients</h1>
+                    <h1 id="detailsTab_creamPuff" onclick="showTab('details', this, 'creamPuff')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_creamPuff">
+                        <p><span class="about-main">Delightful Cream Puffs, </span>Experience the joy of our Delightful Cream Puffs, light and airy pastry filled with luscious cream. Whether you choose the mini or normal size, each cream puff is a bite-sized delight that captures the essence of sweetness and elegance.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_creamPuff">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Pastry Shell: </span>Light and airy, baked to golden perfection.</li>
+                            <li><span class="ing">Cream Filling: </span>Rich and velvety cream for a delightful burst of flavor.</li>
+                            <li><span class="ing">Powdered Sugar: </span>Sprinkled on top for a touch of sweetness.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_creamPuff">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>Mini
+                                    <ul>
+                                        <li>description: bite-sized cream puffs perfect for a dainty indulgence.</li>
+                                        <li>serving: a box with mini-sized cream puffs.</li>
+                                        <li>ideal for: tea parties, dessert platters, or as an elegant addition to any gathering.</li>
+                                    </ul>
+                                </li>
+                                <li>Normal
+                                    <ul>
+                                        <li>description: standard-sized cream puffs for a delightful treat.</li>
+                                        <li>serving: a box with normal-sized cream puffs.</li>
+                                        <li>ideal for: satisfying your sweet cravings or sharing with friends and family.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in a cool, dry place.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the cream puff's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Delightful Cream Puffs are elegantly arranged, making them a perfect addition to your dessert table or a thoughtful gift for any occasion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateSize()">
+            <p>pastries</p>
+            <h1>cream puff</h1>
+            <h2>RM<span id="price_creamPuff"></span></h2>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_creamPuff" value="mini" name="size" onchange="updatePrice('creamPuff')">
+                <label for="mini_creamPuff">mini</label>
+                <input type="radio" id="normal_creamPuff" value="normal" name="size" onchange="updatePrice('creamPuff')">
+                <label for="normal_creamPuff">normal</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+    
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

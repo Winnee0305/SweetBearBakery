@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+        
+    </div>
+
+    <div class="item-container" id="blackForest">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/black-forest.JPG" id="expandedImg_blackForest" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/black-forest.JPG" class="thumbnail" onclick="expandImg(this, 'blackForest')">
+                    <img src="./source/products/black-forest2.JPG" class="thumbnail" onclick="expandImg(this, 'blackForest')">
+                    <img src="./source/products/black-forest3.JPG" class="thumbnail" onclick="expandImg(this, 'blackForest')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_blackForest" onclick="showTab('about', this, 'blackForest')">about</h1>
+                    <h1 id="ingredientTab_blackForest" onclick="showTab('ingredient', this, 'blackForest')">ingredients</h1>
+                    <h1 id="detailsTab_blackForest" onclick="showTab('details', this, 'blackForest')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_blackForest">
+                        <p><span class="about-main">Classic Black Forest Cake, </span>Indulge in the timeless allure of our Classic Black Forest Cake, where layers of moist chocolate sponge are lovingly adorned with luscious whipped cream and a cascade of juicy, dark cherries. This decadent creation captures the essence of luxury and is a celebration of the harmonious union between rich chocolate and the fruity brightness of cherries. Elevate your dessert experience with this delightful masterpiece.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_blackForest">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Chocolate Sponge: </span>Moist and fluffy layers of chocolate perfection.</li>
+                            <li><span class="ing">Whipped Cream: </span>Light and airy, adding a delightful creaminess to each bite.</li>
+                            <li><span class="ing">Dark Cherries: </span>Plump and succulent, providing bursts of fruity sweetness.</li>
+                            <li><span class="ing">Cocoa Powder: </span>Finely sifted for the perfect finishing touch.</li>
+                            <li class="sub-list"><span class="ing">Syrup Soak: </span></li>
+                            <li><span class="ing">Cherry Brandy: </span>Infusing a subtle warmth and depth to the layers.</li>
+                            <li><span class="ing">Simple Syrup: </span>Sweetening and moistening the chocolate sponge.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_blackForest">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>serving size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>slice
+                                    <ul>
+                                        <li>description: a classic portion for a delightful taste of Black Forest Cake.</li>
+                                        <li>serving: a single slice of Black Forest Cake.</li>
+                                        <li>ideal for: those who prefer a moderate serving or want to sample multiple desserts.</li>
+                                    </ul>
+                                </li>
+                                <li>6-inch
+                                    <ul>
+                                        <li>description: a small cake size suitable for intimate gatherings.</li>
+                                        <li>serving: approximately 4-6 servings.</li>
+                                        <li>ideal for: small celebrations, family dinners, or as a gift.</li>
+                                    </ul>
+                                </li>
+                                <li>7-inch
+                                    <ul>
+                                        <li>description: a slightly larger cake, perfect for a small group.</li>
+                                        <li>serving: approximately 6-8 servings.</li>
+                                        <li>ideal for: small gatherings, birthdays, or special occasions with close friends.</li>
+                                    </ul>
+                                </li>
+                                <li>8-inch
+                                    <ul>
+                                        <li>description: a medium-sized cake for a moderate-sized gathering.</li>
+                                        <li>serving: approximately 8-10 servings.</li>
+                                        <li>ideal for: birthday parties, office celebrations, or family events.</li>
+                                    </ul>
+                                </li>
+                                <li>9-inch
+                                    <ul>
+                                        <li>description: a larger cake for a more significant gathering.</li>
+                                        <li>serving: approximately 10-12 servings.</li>
+                                        <li>ideal for: larger parties, anniversaries, or events with extended family and friends.</li>
+                                    </ul>
+                                </li>
+                                <li>10-inch
+                                    <ul>
+                                        <li>description: the largest option, perfect for bigger celebrations.</li>
+                                        <li>serving: approximately 12-14 servings.</li>
+                                        <li>ideal for: large parties, weddings, or any grand celebration.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in the refrigerator for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy, eggs, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in the refrigerator to maintain the integrity of the layers and flavors.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Classic Black Forest Cake is meticulously crafted and elegantly presented, making it the perfect centerpiece for any special occasion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateShape()">
+            <p>cakes</p>
+            <h1>black forest</h1>
+            <h2>RM<span id="price_blackForest"></span></h2>
+            <h3>shape</h3>
+            <div class="option-container">
+                <input type="radio" id="round_blackForest" value="round" name="shape">
+                <label for="round_blackForest">round</label>
+                <input type="radio" id="square_blackForest" value="square" name="shape">
+                <label for="square_blackForest">square</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="slice_blackForest" value="piece" name="size" onchange="updatePrice('blackForest')">
+                <label for="slice_blackForest">one slice</label>
+                <input type="radio" id="6-inch_blackForest" value="inch6" name="size" onchange="updatePrice('blackForest')">
+                <label for="6-inch_blackForest">6-inch</label>
+                <input type="radio" id="7-inch_blackForest" value="inch7" name="size" onchange="updatePrice('blackForest')">
+                <label for="7-inch_blackForest">7-inch</label>
+                <input type="radio" id="8-inch_blackForest" value="inch8" name="size" onchange="updatePrice('blackForest')">
+                <label for="8-inch_blackForest">8-inch</label>
+                <input type="radio" id="9-inch_blackForest" value="inch9" name="size" onchange="updatePrice('blackForest')">
+                <label for="9-inch_blackForest">9-inch</label>
+                <input type="radio" id="10-inch_blackForest" value="inch10" name="size" onchange="updatePrice('blackForest')">
+                <label for="10-inch_blackForest">10-inch</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+            <p id="invalid_shape">**please choose a shape</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+        
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

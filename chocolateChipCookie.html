@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+    
+    </div>
+
+    <div class="item-container" id="chocolateChipCookie">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/chocolate-chip-cookie.JPG" id="expandedImg_chocolateChipCookie" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/chocolate-chip-cookie.JPG" class="thumbnail" onclick="expandImg(this, 'chocolateChipCookie')">
+                    <img src="./source/products/chocolate-chip-cookie2.JPG" class="thumbnail" onclick="expandImg(this, 'chocolateChipCookie')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_chocolateChipCookie" onclick="showTab('about', this, 'chocolateChipCookie')">about</h1>
+                    <h1 id="ingredientTab_chocolateChipCookie" onclick="showTab('ingredient', this, 'chocolateChipCookie')">ingredients</h1>
+                    <h1 id="detailsTab_chocolateChipCookie" onclick="showTab('details', this, 'chocolateChipCookie')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_chocolateChipCookie">
+                        <p><span class="about-main">Classic Chocolate Chip Cookies, </span>Indulge in the timeless delight of our Classic Chocolate Chip Cookies, crafted to perfection with the finest ingredients. Each bite is a symphony of flavors, with buttery dough, rich chocolate chips, and a hint of vanilla. These cookies are a nostalgic treat that brings warmth and comfort, perfect for sharing or savoring on your own.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_chocolateChipCookie">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">All-Purpose Flour: </span>High-quality flour for the perfect cookie texture.</li>
+                            <li><span class="ing">Butter: </span>Rich and creamy, adding a buttery flavor to the cookies.</li>
+                            <li><span class="ing">Brown Sugar: </span>Creates a soft and chewy texture with a hint of caramel.</li>
+                            <li><span class="ing">Granulated Sugar: </span>Sweetens the cookies and adds a touch of crispiness.</li>
+                            <li><span class="ing">Eggs: </span>Provide structure and moisture to the cookie dough.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Enhances the overall flavor with a warm and sweet aroma.</li>
+                            <li><span class="ing">Baking Soda: </span>Leavening agent for a perfect rise.</li>
+                            <li><span class="ing">Salt: </span>Balances the sweetness and enhances the chocolate flavor.</li>
+                            <li><span class="ing">Chocolate Chips: </span>High-quality semi-sweet chocolate for rich and gooey chocolate chunks.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_chocolateChipCookie">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>100g
+                                    <ul>
+                                        <li>description: a convenient and shareable pack of 100 grams.</li>
+                                        <li>serving: approximately 2-3 servings.</li>
+                                        <li>ideal for: sharing with friends or enjoying over multiple sittings.</li>
+                                    </ul>
+                                </li>
+                                <li>250g
+                                    <ul>
+                                        <li>description: a larger pack containing 250 grams of delicious cookies.</li>
+                                        <li>serving: approximately 5-7 servings.</li>
+                                        <li>ideal for: families, gatherings, or those who want a larger quantity.</li>
+                                    </ul>
+                                </li>
+                                <li>430g
+                                    <ul>
+                                        <li>description: the biggest option for an abundance of chocolate chip goodness.</li>
+                                        <li>serving: approximately 9-12 servings.</li>
+                                        <li>ideal for: parties, events, or serious chocolate chip enthusiasts.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in an airtight container for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy, eggs, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the cookie's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Classic Chocolate Chip Cookies are carefully packaged to preserve their freshness and are a delightful addition to any dessert table or as a sweet gift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateSize()">
+            <p>cookies</p>
+            <h1>chocolate chip cookie</h1>
+            <h2>RM<span id="price_chocolateChipCookie"></span></h2>
+            <h3>packet weight</h3>
+            <div class="option-container">
+                <input type="radio" id="100g_chocolateChipCookie" value="g100" name="size" onchange="updatePrice('chocolateChipCookie')">
+                <label for="100g_chocolateChipCookie">100g</label>
+                <input type="radio" id="250g_chocolateChipCookie" value="g250" name="size" onchange="updatePrice('chocolateChipCookie')">
+                <label for="250g_chocolateChipCookie">250g</label>
+                <input type="radio" id="430g_chocolateChipCookie" value="g430" name="size" onchange="updatePrice('chocolateChipCookie')">
+                <label for="430g_chocolateChipCookie">430g</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a weight</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+    <div id="footer">
+    
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

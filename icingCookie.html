@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="icingCookie">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/icing-cookie.JPG" id="expandedImg_icingCookie" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/icing-cookie.JPG" class="thumbnail" onclick="expandImg(this, 'icingCookie')">
+                    <img src="./source/products/icing-cookie2.JPG" class="thumbnail" onclick="expandImg(this, 'icingCookie')">
+                    <img src="./source/products/icing-cookie3.JPG" class="thumbnail" onclick="expandImg(this, 'icingCookie')">
+                    <img src="./source/products/icing-cookie4.JPG" class="thumbnail" onclick="expandImg(this, 'icingCookie')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_icingCookie" onclick="showTab('about', this, 'icingCookie')">about</h1>
+                    <h1 id="ingredientTab_icingCookie" onclick="showTab('ingredient', this, 'icingCookie')">ingredients</h1>
+                    <h1 id="detailsTab_icingCookie" onclick="showTab('details', this, 'icingCookie')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_icingCookie">
+                        <p><span class="about-main">Artisanal Icing Cookies, </span>Experience the joy of our Artisanal Icing Cookies, where creativity meets deliciousness. Each cookie is a canvas of sweet inspiration, hand-decorated with vibrant royal icing to bring a pop of color and a burst of flavor. Perfect for celebrations, gifts, or simply indulging in a moment of sweet bliss.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_icingCookie">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">All-Purpose Flour: </span>High-quality flour for the perfect cookie texture.</li>
+                            <li><span class="ing">Unsalted Butter: </span>Rich and creamy, adding a buttery flavor to the cookies.</li>
+                            <li><span class="ing">Granulated Sugar: </span>Sweetens the cookies and provides a hint of crispiness.</li>
+                            <li><span class="ing">Eggs: </span>Provide structure and moisture to the cookie dough.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Enhances the overall flavor with a warm and sweet aroma.</li>
+                            <li><span class="ing">Royal Icing: </span>Smooth and glossy icing for vibrant and intricate decorations.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_icingCookie">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>mini
+                                    <ul>
+                                        <li>description: bite-sized delights, perfect for snacking or as cute additions to any dessert spread.</li>
+                                        <li>serving: a mini-sized cookie.</li>
+                                        <li>ideal for: those who enjoy smaller, adorable treats.</li>
+                                    </ul>
+                                </li>
+                                <li>normal
+                                    <ul>
+                                        <li>description: standard-sized cookies, great for enjoying on their own or as charming gifts.</li>
+                                        <li>serving: a regular-sized cookie.</li>
+                                        <li>ideal for: anyone who loves beautifully decorated cookies with a touch of sweetness.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in an airtight container for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy, eggs, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the cookie's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Artisanal Icing Cookies are individually crafted and carefully packaged, making them a delightful addition to any celebration or a thoughtful gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateShape()">
+            <p>cookies</p>
+            <h1>icing cookie</h1>
+            <h2>RM<span id="price_icingCookie"></span></h2>
+            <h3>shape</h3>
+            <div class="option-container">
+                <input type="radio" id="circle_icingCookie" value="circle" name="shape">
+                <label for="circle_icingCookie">circle</label>
+                <input type="radio" id="square_icingCookie" value="square" name="shape">
+                <label for="square_icingCookie">square</label>
+                <input type="radio" id="rectangle_icingCookie" value="rectangle" name="shape">
+                <label for="rectangle_icingCookie">rectangle</label>
+                <input type="radio" id="triangle_icingCookie" value="triangle" name="shape">
+                <label for="triangle_icingCookie">triangle</label>
+                <input type="radio" id="star_icingCookie" value="star" name="shape">
+                <label for="star_icingCookie">star</label>
+                <input type="radio" id="christmas_tree_icingCookie" value="christmas_tree" name="shape">
+                <label for="christmas_tree_icingCookie">christmas tree</label>
+                <input type="radio" id="snowflake_icingCookie" value="snowflake" name="shape">
+                <label for="snowflake_icingCookie">snowflake</label>
+                <input type="radio" id="gingerman_icingCookie" value="gingerman" name="shape">
+                <label for="gingerman_icingCookie">gingerman</label>
+                <input type="radio" id="santa_icingCookie" value="santa" name="shape">
+                <label for="santa_icingCookie">santa</label>
+                <input type="radio" id="candy_cane_icingCookie" value="candy_cane" name="shape">
+                <label for="candy_cane_icingCookie">candy cane</label>
+                <input type="radio" id="easter_egg_icingCookie" value="easter_egg" name="shape">
+                <label for="easter_egg_icingCookie">easter egg</label>
+                <input type="radio" id="heart_icingCookie" value="heart" name="shape">
+                <label for="heart_icingCookie">heart</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_icingCookie" value="mini" name="size" onchange="updatePrice('icingCookie')">
+                <label for="mini_icingCookie">mini</label>
+                <input type="radio" id="normal_icingCookie" value="normal" name="size" onchange="updatePrice('icingCookie')">
+                <label for="normal_icingCookie">normal</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+            <p id="invalid_shape">**please choose a shape</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

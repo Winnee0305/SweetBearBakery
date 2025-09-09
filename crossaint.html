@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="crossaint">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/croissants.JPG" id="expandedImg_crossaint" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/croissants.JPG" class="thumbnail" onclick="expandImg(this, 'crossaint')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_croissant" onclick="showTab('about', this, 'croissant')">about</h1>
+                    <h1 id="ingredientTab_croissant" onclick="showTab('ingredient', this, 'croissant')">ingredients</h1>
+                    <h1 id="detailsTab_croissant" onclick="showTab('details', this, 'croissant')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_croissant">
+                        <p><span class="about-main">Buttery Croissants, </span>Indulge in the flaky perfection of our Buttery Croissants, a delightful pastry that boasts layers of buttery goodness. Available in mini, normal, and large sizes, each croissant is a testament to the artistry of French baking, delivering a heavenly experience with every bite.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_croissant">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Flour: </span>High-quality flour for a light and flaky texture.</li>
+                            <li><span class="ing">Butter: </span>Rich and premium butter for layers of flavor.</li>
+                            <li><span class="ing">Sugar: </span>Subtle sweetness to enhance the overall taste.</li>
+                            <li><span class="ing">Yeast: </span>Natural yeast for a light and airy rise.</li>
+                            <li><span class="ing">Salt: </span>Enhances the flavor profile of the croissant.</li>
+                            <li><span class="ing">Egg Wash: </span>Applied for a golden and shiny crust.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_croissant">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>Mini
+                                    <ul>
+                                        <li>description: bite-sized croissants perfect for a quick and delightful treat.</li>
+                                        <li>serving: a box with mini-sized croissants.</li>
+                                        <li>ideal for: breakfast, brunch, or as a delightful addition to a snack platter.</li>
+                                    </ul>
+                                </li>
+                                <li>Normal
+                                    <ul>
+                                        <li>description: standard-sized croissants for a classic and satisfying experience.</li>
+                                        <li>serving: a box with normal-sized croissants.</li>
+                                        <li>ideal for: breakfast, brunch, or as a versatile accompaniment to various dishes.</li>
+                                    </ul>
+                                </li>
+                                <li>Large
+                                    <ul>
+                                        <li>description: generously-sized croissants for a more indulgent experience.</li>
+                                        <li>serving: a box with large-sized croissants.</li>
+                                        <li>ideal for: sharing with friends and family, or for special occasions and gatherings.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in a cool, dry place.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the croissant's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Buttery Croissants are carefully arranged, ready to elevate your breakfast or become the highlight of your special occasions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateSize()">
+            <p>pastries</p>
+            <h1>crossaint</h1>
+            <h2>RM<span id="price_crossaint"></span></h2>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_crossaint" value="mini" name="size" onchange="updatePrice('crossaint')">
+                <label for="mini_crossaint">mini</label>
+                <input type="radio" id="normal_crossaint" value="normal" name="size" onchange="updatePrice('crossaint')">
+                <label for="normal_crossaint">normal</label>
+                <input type="radio" id="large_crossaint" value="large" name="size" onchange="updatePrice('crossaint')">
+                <label for="large_crossaint">large</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+   <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

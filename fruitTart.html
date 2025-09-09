@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="fruitTart">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/fruit-tarts.JPG" id="expandedImg_fruitTart" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/fruit-tarts.JPG" class="thumbnail" onclick="expandImg(this, 'fruitTart')">
+                    <img src="./source/products/fruit-tarts2.JPG" class="thumbnail" onclick="expandImg(this, 'fruitTart')">
+                    <img src="./source/products/fruit-tarts3.JPG" class="thumbnail" onclick="expandImg(this, 'fruitTart')">
+                    <img src="./source/products/fruit-tarts4.JPG" class="thumbnail" onclick="expandImg(this, 'fruitTart')">
+                    <img src="./source/products/fruit-tarts5.JPG" class="thumbnail" onclick="expandImg(this, 'fruitTart')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_fruitTart" onclick="showTab('about', this, 'fruitTart')">about</h1>
+                    <h1 id="ingredientTab_fruitTart" onclick="showTab('ingredient', this, 'fruitTart')">ingredients</h1>
+                    <h1 id="detailsTab_fruitTart" onclick="showTab('details', this, 'fruitTart')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_fruitTart">
+                        <p><span class="about-main">Exquisite Fruit Tart, </span>Indulge in the delightful flavors of our Exquisite Fruit Tart, a perfect harmony of buttery crust, velvety pastry cream, and a vibrant assortment of fresh, seasonal fruits. Each tart is a work of art, meticulously crafted to bring a burst of color and a symphony of flavors to your palate. Whether you choose the mini, normal, or large size, our fruit tarts are a celebration of sweetness and elegance.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_fruitTart">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Butter: </span>Rich and high-quality for a flavorful tart crust.</li>
+                            <li><span class="ing">All-Purpose Flour: </span>Creates a tender and buttery tart crust.</li>
+                            <li><span class="ing">Pastry Cream: </span>Smooth and luscious cream for the perfect base.</li>
+                            <li><span class="ing">Fresh Fruits: </span>A colorful assortment of seasonal fruits for topping.</li>
+                            <li><span class="ing">Apricot Glaze: </span>Adds a glossy finish to enhance the tart's appearance.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_fruitTart">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>mini
+                                    <ul>
+                                        <li>description: a petite delight, perfect for individual indulgence or sharing at gatherings.</li>
+                                        <li>serving: a mini-sized tart, approximately 3 inches in diameter.</li>
+                                        <li>ideal for: personal treats or as charming additions to dessert platters.</li>
+                                    </ul>
+                                </li>
+                                <li>normal
+                                    <ul>
+                                        <li>description: a standard-sized tart suitable for various occasions and gatherings.</li>
+                                        <li>serving: a regular-sized tart, approximately 7 inches in diameter.</li>
+                                        <li>ideal for: sharing with family and friends or as a delightful dessert centerpiece.</li>
+                                    </ul>
+                                </li>
+                                <li>large
+                                    <ul>
+                                        <li>description: an indulgent, larger tart perfect for celebrations and special events.</li>
+                                        <li>serving: a large-sized tart, approximately 10 inches in diameter.</li>
+                                        <li>ideal for: grand occasions, parties, or anyone with a love for abundant fruit tarts.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; refrigerate for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy and gluten. may contain traces of nuts.</p>
+                            <div class = "heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>refrigerate to maintain the tart's freshness and prevent the fruits from wilting.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Exquisite Fruit Tart is beautifully presented, making it a stunning addition to any dessert table or a thoughtful gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateFlavour()">
+            <p>tarts</p>
+            <h1>fruit tart</h1>
+            <h2>RM<span id="price_fruitTart"></span></h2>
+            <h3>flavour</h3>
+            <div class="option-container">
+                <input type="radio" id="strawberry_fruitTart" value="strawberry" name="flavour">
+                <label for="strawberry_fruitTart">strawberry</label>
+                <input type="radio" id="blueberry_fruitTart" value="blueberry" name="flavour">
+                <label for="blueberry_fruitTart">blueberry</label>
+                <input type="radio" id="mango_fruitTart" value="mango" name="flavour">
+                <label for="mango_fruitTart">mango</label>
+                <input type="radio" id="citrus_fruitTart" value="citrus" name="flavour">
+                <label for="citrus_fruitTart">citrus</label>
+                <input type="radio" id="raspberry_fruitTart" value="raspberry" name="flavour">
+                <label for="raspberry_fruitTart">raspberry</label>
+                <input type="radio" id="kiwi_fruitTart" value="kiwi" name="flavour">
+                <label for="kiwi_fruitTart">kiwi</label>
+                <input type="radio" id="cherry_fruitTart" value="cherry" name="flavour">
+                <label for="cherry_fruitTart">cherry</label>
+                <input type="radio" id="apple_fruitTart" value="apple" name="flavour">
+                <label for="apple_fruitTart">apple</label>
+                <input type="radio" id="mixed_berry_fruitTart" value="mixed_berry" name="flavour">
+                <label for="mixed_berry_fruitTart">mixed berry</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_fruitTart" value="mini" name="size" onchange="updatePrice('fruitTart')">
+                <label for="mini_fruitTart">mini</label>
+                <input type="radio" id="normal_fruitTart" value="normal" name="size" onchange="updatePrice('fruitTart')">
+                <label for="normal_fruitTart">normal</label>
+                <input type="radio" id="large_fruitTart" value="large" name="size" onchange="updatePrice('fruitTart')">
+                <label for="large_fruitTart">large</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_flavour">**please choose a flavour</p>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

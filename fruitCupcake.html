@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="fruitCupcake">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/fruit-cupcake.JPG" id="expandedImg_fruitCupcake" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/fruit-cupcake.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake2.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake3.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake4.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake5.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake6.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake7.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                    <img src="./source/products/fruit-cupcake8.JPG" class="thumbnail" onclick="expandImg(this, 'fruitCupcake')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_fruitCupcake" onclick="showTab('about', this, 'fruitCupcake')">about</h1>
+                    <h1 id="ingredientTab_fruitCupcake" onclick="showTab('ingredient', this, 'fruitCupcake')">ingredients</h1>
+                    <h1 id="detailsTab_fruitCupcake" onclick="showTab('details', this, 'fruitCupcake')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_fruitCupcake">
+                        <p><span class="about-main">Fruit Cupcake, </span>Indulge in the fruity delight of our Fruit Cupcake, a perfect blend of moist cake and vibrant fruit flavors. Whether in mini or normal size, each cupcake is a burst of freshness and sweetness. Elevate your dessert experience with these delightful treats suitable for any occasion.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_fruitCupcake">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Cake Base: </span>Soft and moist cake for a delightful texture.</li>
+                            <li><span class="ing">Assorted Fruits: </span>Fresh and vibrant fruits for a burst of flavor.</li>
+                            <li><span class="ing">Sugar: </span>Subtle sweetness to enhance the overall taste.</li>
+                            <li><span class="ing">Eggs: </span>Fresh and high-quality eggs for structure and moisture.</li>
+                            <li><span class="ing">Flour: </span>High-quality flour for the perfect cake texture.</li>
+                            <li><span class="ing">Butter: </span>Rich and premium butter for added flavor.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Infuses a delightful aroma into the cupcake.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_fruitCupcake">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>Mini
+                                    <ul>
+                                        <li>description: bite-sized cupcakes perfect for a fruity and delightful treat.</li>
+                                        <li>serving: a box with mini-sized Fruit Cupcakes.</li>
+                                        <li>ideal for: parties, events, or as a charming addition to a dessert spread.</li>
+                                    </ul>
+                                </li>
+                                <li>Normal
+                                    <ul>
+                                        <li>description: standard-sized cupcakes for a classic and satisfying cupcake experience.</li>
+                                        <li>serving: a box with normal-sized Fruit Cupcakes.</li>
+                                        <li>ideal for: indulging in a sweet treat or sharing with friends and family.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in a cool, dry place.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy, eggs, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in a cool, dry place to maintain the cupcake's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Fruit Cupcakes are beautifully crafted, ready to add a burst of freshness to your celebrations or serve as a delightful gift.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateFlavour()">
+            <p>cupcakes</p>
+            <h1>fruit cupcake</h1>
+            <h2>RM<span id="price_fruitCupcake"></span></h2>
+            <h3>flavour</h3>
+            <div class="option-container">
+                <input type="radio" id="strawberry_fruitCupcake" value="strawberry" name="flavour">
+                <label for="strawberry_fruitCupcake">strawberry</label>
+                <input type="radio" id="blueberry_fruitCupcake" value="blueberry" name="flavour">
+                <label for="blueberry_fruitCupcake">blueberry</label>
+                <input type="radio" id="raspberry_fruitCupcake" value="raspberry" name="flavour">
+                <label for="raspberry_fruitCupcake">raspberry</label>
+                <input type="radio" id="mixed_berry_fruitCupcake" value="mixed_berry" name="flavour">
+                <label for="mixed_berry_fruitCupcake">mixed berry</label>
+                <input type="radio" id="mango_fruitCupcake" value="mango" name="flavour">
+                <label for="mango_fruitCupcake">mango</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_fruitCupcake" value="mini" name="size" onchange="updatePrice('fruitCupcake')">
+                <label for="mini_fruitCupcake">mini</label>
+                <input type="radio" id="normal_fruitCupcake" value="normal" name="size" onchange="updatePrice('fruitCupcake')">
+                <label for="normal_fruitCupcake">normal</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_flavour">**please choose a flavour</p>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

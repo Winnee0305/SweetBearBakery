@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="cover">
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="./home.html"><img src="./source/nav-logo.png" class="nav-logo"></a>
+        </div>
+        <ul class="links">
+            <li class="tabs"><a href="./home.html#about-us">about</a></li>
+            <li class="tabs"><a href="./catalogue.html">products</a></li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('cakes')">cakes</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('cookies')">cookies</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('tarts')">tarts</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('ice-cream')">ice-cream</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('pastries')">pastries</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('dessert-cups')">dessert cups</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('cupcakes')">cupcakes</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="redirectToCatalogue('macaroons')">macaroons</li>
+            <li class="tabs"><a href="./contact.html">contact</a></li>
+            <li><img src="./source/user.png" class="icon" onclick="showLoginWindow(); showLogin()"></li>
+            <li><img src="./source/shopping-cart.png" class="icon cart-button"></li>
+        </ul>
+        <div class="dropdown-button">
+            <img src="./source/menu-burger.png" class="icon" id="dropdown-icon">
+        </div>
+    </div>
+
+    <div class="dropdown-menu">
+        <ul class="dropdown-content">
+            <li><a href="./home.html#about-us">about</a></li>
+            <li><a href="./catalogue.html">products</a></li>
+            <li><a onclick="redirectToCatalogue('cakes')">cakes</a></li>
+            <li><a onclick="redirectToCatalogue('cookies')">cookies</a></li>
+            <li><a onclick="redirectToCatalogue('tarts')">tarts</a></li>
+            <li><a onclick="redirectToCatalogue('ice-cream')">ice-cream</a></li>
+            <li><a onclick="redirectToCatalogue('pastries')">pastries</a></li>
+            <li><a onclick="redirectToCatalogue('dessert-cups')">dessert cups</a></li>
+            <li><a onclick="redirectToCatalogue('cupcakes')">cupcakes</a></li>
+            <li><a onclick="redirectToCatalogue('macaroons')">macaroons</a></li>
+            <li><a href="./contact.html">contact</a></li>
+            <li><a onclick="showLoginWindow(); showLogin()">profile</a></li>
+            <li><a class="cart-button">shopping cart</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-cart">
+        <div class="cart-content">
+            <table>
+                <tr class="bottom-line top-line">
+                    <th><div class="box">product</div></th>
+                    <th><div class="box">flavour</div></th>
+                    <th><div class="box">shape</div></th>
+                    <th><div class="box">size</div></th>
+                    <th><div class="box">price</div></th>
+                    <th><div class="box">quantity</div></th>
+                    <th><div class="box">total</div></th>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <div class="empty-container">
+                            <div class="empty">
+                                <img src="./source/empty-cart.png" class="empty-cart-icon">
+                                your cart is empty! 
+                                <a href="./catalogue.html">shop now</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="top-line">
+                    <td colspan="5"></td>
+                    <th colspan="2" class="thin-bottom"><div class="box">subtotal</div></td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <th colspan="2"><div class="box">delivery fees</div></th>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <th colspan="2" class="double-line"><div class="box">grand total</div></th>
+                </tr>
+            </table>
+            <div class="sticky-buttons">
+                <a><img src="./source/cross.png" class="icon" id="closeCartBtn"></a>
+                <div class="checkOut" onclick="alert('This is just a dummy check out shopping cart button. \nThe feature will be ready soon!')">
+                    check out
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="login-register-window">
+        <div id="login-register-container">
+            <div id="login-container">
+                <div class="cross-icon">
+                    <img src="./source/cross.png" class="icon" onclick="hideLoginWindow()">
+                </div>
+                <div class="center-container">
+                    <h1>welcome to <span class="brand-name">sweet bear!</span></h1>
+                    <h2> - satisfying your sweet tooth, one treat at a time at sweet bear -</h2>
+                    <form method="get" class="userinput-container" onsubmit="return validateLogin()">
+                        <div class="left-container">
+                            <div class="ques-container">
+                                <p>email address</p>
+                                <input type="email" label="email" class="userinput" id="login_email">
+                                <p id="login_invalid_email">**please enter a valid email address</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>password</p>
+                                <input type="password" label="password" class="userinput" id="login_password">
+                                <p id="login_invalid_password">**please enter a valid password</p>
+                            </div> 
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" value="submit button" class="login-button">log in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom-container">
+                    <p>new to sweet bear? <a onclick="showRegister()">join now</a></p>
+                </div>
+            </div>
+            <div id="register-container">
+                <div class="cross-icon">
+                    <img src="./source/cross.png" class="icon" onclick="hideLoginWindow()">
+                </div>
+                <div class="center-container">
+                    <h1>join the <span class="brand-name">sweet bear!</span></h1>
+                    <h2> - unlock the magic of sweet moments -</h2>
+                    <form method="get" class="userinput-container" onsubmit="return validateSignup()">
+                        <div class="left-container">
+                            <div class="ques-container">
+                                <p>first name</p>
+                                <input type="name" label="first-name" class="userinput" id="signup_firstname">
+                                <p id="signup_invalid_firstname">**please enter a valid firstname</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>last name</p>
+                                <input type="name" label="last-name" class="userinput" id="signup_lastname">
+                                <p id="signup_invalid_lastname">**please enter a valid lastname</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>email address</p>
+                                <input type="email" label="email" class="userinput" id="signup_email">
+                                <p id="signup_invalid_email">**please enter a valid email address</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>date of birth</p>
+                                <input type="date" label="dob" class="userinput" id="signup_dob">
+                                <p id="signup_invalid_dob">**please select your date of birth</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>gender</p>
+                                <select size="1" label="gender" class="userinput" id="signup_gender">
+                                    <option value="select">Select your gender</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                </select>
+                                <p id="signup_invalid_gender">**please select your gender</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>phone number</p>
+                                <input type="tel" lbale="phone-number" class="userinput" id="signup_phone">
+                                <p id="signup_invalid_phone">**please enter a valid phone number</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>password</p>
+                                <input type="password" label="password" class="userinput" id="signup_password">
+                                <p id="signup_invalid_password">**please enter a valid password</p>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" value="submit button" class="login-button">create an accont</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom-container">
+                    <p>already have an account? <a onclick="showLogin()">sign in</a></p>
+                </div>
+            </div>
+            <div class="logo-container">
+                <img src="./source/logo.png" class="logo"> 
+            </div>
+        </div>
+    </div>
+
+    <div class="cover-box">
+        <img src="./source/logo.png" class="logo">
+        <h1>sweet bear</h1>
+        <h2>satisfying your sweet tooth, one treat at a time at sweet bear.</h2>
+        <div class="button-container">
+            <a href="./catalogue.html">shop now</a>
+            <a onclick="showLoginWindow(); showLogin()">log in</a>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="products-container small-vp" id="about-us">
+            <div class="text">
+                <p>about us</p>
+                - crafting sweet memories, one dessert at a time - our story of passion and flavorful artistry -
+            </div>
+            <div class="about-content">
+                <p><img src="./source/about1.JPG" class="float-left"><b>Welcome to Sweet Bear: A Sweet Haven Born of Passion!</b><br>
+                    Sweet Bear isn't just a dessert shop; it's a celebration of dreams, a testament to perseverance, and a testament to the belief that small beginnings can lead to sweet successes. 
+                    <img src="./source/about2.JPG" class="float-right">We are not just a business; we're a startup and micro enterprise on a mission to infuse joy into your everyday moments through delightful desserts.
+                    <br>Our <b>journey</b> began with a small team of passionate individuals, driven by a shared love for all things sweet. Fueled by the desire to create a space where every dessert tells a story, Sweet Bear emerged as a labor of love, crafting confections that are as unique and diverse as the community we serve.
+                    <br>What sets <b>Sweet Bear</b> apart is not just the irresistible taste of our desserts but the heart and soul we pour into every creation. From the careful selection of high-quality ingredients to the meticulous attention to detail, our dedicated team of bakers ensures that each treat that leaves our kitchen is a work of art.
+                    <br>We understand the challenges of starting small, but we believe that greatness can come from the humblest of beginnings. Sweet Bear is more than just a brand; it's a symbol of determination, innovation, and the pursuit of sweet success in the face of challenges.
+                    <img src="./source/about3.JPG" class="float-right2"><br><b>In our virtual storefront,</b> you'll find an array of desserts that reflect our commitment to excellence. From classic favorites that bring back fond memories to innovative creations that push the boundaries of flavor, Sweet Bear has something to satisfy every craving.
+                    <br>As a micro enterprise, community means everything to us. We invite you to be a part of our Sweet Bear family, supporting local entrepreneurship and savoring the sweet rewards of your patronage. Every order you place isn't just a transaction; it's a vote of confidence in the dreams of a small business.
+                    <br><b>Thank you for choosing Sweet Bear.</b> Your support means the world to us. Join us on this sweet journey, and let's make every moment a little sweeter together. Welcome to Sweet Bear, where passion meets dessert, and dreams become treats!
+                </p>
+            </div>
+        </div>
+            
+        <div class="products-container small-vp">
+            <div class="text">
+                <p>best sellers</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp">
+            <div class="text">
+                <p>product categories</p>
+                - life is short, eat dessert first -
+            </div>
+            <ul class="products">
+                <li>
+                    <a onclick="redirectToCatalogue('cakes')"><img src="./source/products/strawberry-cake.JPG" class="products-img"></a>
+                    <p class="products-name">cakes<p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('cookies')"><img src="./source/products/chocolate-chip-cookie.JPG" class="products-img"></a>
+                    <p class="products-name">cookies</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('tarts')"><img src="./source/products/fruit-tarts.JPG" class="products-img"></a>
+                    <p class="products-name">tarts</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('ice-cream')"><img src="./source/products/ice-cream-chocolate.JPG" class="products-img"></a>
+                    <p class="products-name">ice-cream</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('pastries')"><img src="./source/products/croissants.JPG" class="products-img"></a>
+                    <p class="products-name">pastries</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('dessert-cups')"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">dessert cups</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('cupcakes')"><img src="./source/products/frosted-cupcake.JPG" class="products-img"></a>
+                    <p class="products-name">cup cakes</p>
+                </li>
+                <li>
+                    <a onclick="redirectToCatalogue('macaroons')"><img src="./source/products/macaroons.JPG" class="products-img"></a
+                    ><p class="products-name">macaroons</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container1">
+            <div class="social-media-container">
+                <ul class="icon">
+                    <li>
+                        <a><img src="./source/facebook.png" class="social-media-icon"></a>
+                    </li>
+                    <li>
+                        <a><img src="./source/instagram.png" class="social-media-icon"></a>
+                    </li>
+                    <li>
+                        <a><img src="./source/google.png" class="social-media-icon"></a>
+                    </li>
+                </ul>
+                <div class="text">
+                    connect with dessert lovers!
+                </div>
+            </div>
+
+            <div class="logo-container">
+                <img src="./source/nav-logo.png" class="footer-logo">
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="site-map-container">
+                <p class="text"><b>learn more</b></p>
+                <ul class="hyperlinks">
+                    <li><a href="./home.html">home</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="#">about</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('cakes')">cakes</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./blackForest.html">black forest</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./redVelvet.html">red velvet</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitCake.html">fruit cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./cheesecake.html">cheesecake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./operaCake.html">opera cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="strawberryCake.html">strawberry cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('cookies')">cookies</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./chocolateChipCookie.html">chocolate chip cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./icingCookie.html">icing cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./oatmealCookie.html">oatmeal cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('tarts')">tarts</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitTart.html">fruit tart<a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./chocolateTart.html">chocolate tart</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('ice-cream')">ice-cream</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">chocolate</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">mint</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">strawberry</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">vanilla</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">matcha</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('pastries')">pastries</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./creamPuff.html">cream puff</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./crossaint.html">crossaint</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('dessert-cups')">dessert cups</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./tiramisu.html">tiramisu</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="chocolateMousse.html">chocolate mousse</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="redirectToCatalogue('cupcakes')">cup-cakes</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="hokkaidoCupcake.html">hokkaido cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./frostedCupcake.html">frosted cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitCupcake.html">fruit cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="./macaroon.html">macaroons</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="./contact.html">contact</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                </ul>
+            </div>
+
+            <div class="contact-container">
+                <div class="address-container">
+                    <p class="text"><b>address</b></p>
+                    <div class="details-container">
+                        5, Jalan Universiti<br>Bandar Sunway<br>47500 Petaling Jaya, Selangor<br>Malaysia
+                    </div>
+                </div>
+                <div class="business-hour-container">
+                    <p class="text"><b>business hour</b></p>
+                    <div class="time-container">
+                        <div class="time">
+                            mon-fri<br>sat-sun
+                        </div>
+                        <div class="time">
+                            10:00am - 08:00pm<br>08:00am - 10:00pm
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us-container">
+                    <p class="text"><b>contact us</b></p>
+                    <div class="contacts">
+                        <ul class="phone-mail">
+                            <li>
+                                <img src="./source/phone.png" class="icon">
+                                012-3456789
+                            </li>
+                            <li>    
+                                <img src="./source/mail.png" class="icon">
+                                sweet.bear@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container3">
+            <div class="dates">
+                <p>creation date:&nbsp;25-10-2023</p>&nbsp;
+                <p>last updated:&nbsp;<span id=last_updated></span></p>&nbsp;
+                <p>last data collection:&nbsp;<span id="date_collect">-</span></p>
+            </div>
+            <div class="copyright-container">
+                Copyright &copy; 2023 SweetBear. all copyright served.
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

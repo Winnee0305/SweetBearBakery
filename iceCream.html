@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+
+    </div>
+
+    <div class="item-container" id="iceCream">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/ice-cream-chocolate.JPG" id="expandedImg_iceCream" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/ice-cream-chocolate.JPG" class="thumbnail" onclick="expandImg(this, 'iceCream')">
+                    <img src="./source/products/ice-cream-matcha.JPG" class="thumbnail" onclick="expandImg(this, 'iceCream')">
+                    <img src="./source/products/ice-cream-mint.JPG" class="thumbnail" onclick="expandImg(this, 'iceCream')">
+                    <img src="./source/products/ice-cream-strawberry.JPG" class="thumbnail" onclick="expandImg(this, 'iceCream')">
+                    <img src="./source/products/ice-cream-vanilla.JPG" class="thumbnail" onclick="expandImg(this, 'iceCream')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_iceCream" onclick="showTab('about', this, 'iceCream')">about</h1>
+                    <h1 id="ingredientTab_iceCream" onclick="showTab('ingredient', this, 'iceCream')">ingredients</h1>
+                    <h1 id="detailsTab_iceCream" onclick="showTab('details', this, 'iceCream')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_iceCream">
+                        <p><span class="about-main">Creamy Ice Cream Delight, </span>Indulge in the exquisite pleasure of our Creamy Ice Cream Delight, a frozen treat that combines the finest ingredients to create a symphony of rich flavors and smooth textures. Whether you choose the 130ml, 290ml, 500ml, 725ml, or 1000ml size, our ice cream delights are a celebration of pure enjoyment.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_iceCream">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Milk: </span>High-quality dairy milk for a creamy base.</li>
+                            <li><span class="ing">Cream: </span>Rich and velvety, adding indulgence to the ice cream.</li>
+                            <li><span class="ing">Sugar: </span>Fine sugar to sweeten the ice cream to perfection.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Infuses a delightful aroma into the ice cream.</li>
+                            <li><span class="ing">Flavorings: </span>Natural flavorings for an authentic taste experience.</li>
+                            <li><span class="ing">Mix-ins (if applicable): </span>Varied mix-ins for added texture and flavor.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_iceCream">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>130ml
+                                    <ul>
+                                        <li>description: a personal-sized delight for individual indulgence.</li>
+                                        <li>serving: a container with a capacity of 130ml.</li>
+                                        <li>ideal for: personal treats or as charming additions to dessert platters.</li>
+                                    </ul>
+                                </li>
+                                <li>290ml
+                                    <ul>
+                                        <li>description: a generous portion for a delightful ice cream experience.</li>
+                                        <li>serving: a container with a capacity of 290ml.</li>
+                                        <li>ideal for: those who prefer a moderate serving or want to sample multiple flavors.</li>
+                                    </ul>
+                                </li>
+                                <li>500ml
+                                    <ul>
+                                        <li>description: a larger container perfect for sharing at gatherings or special occasions.</li>
+                                        <li>serving: a container with a capacity of 500ml.</li>
+                                        <li>ideal for: sharing with family and friends or as a delightful dessert centerpiece.</li>
+                                    </ul>
+                                </li>
+                                <li>725ml
+                                    <ul>
+                                        <li>description: an indulgent, larger container suitable for grand occasions.</li>
+                                        <li>serving: a container with a capacity of 725ml.</li>
+                                        <li>ideal for: grand occasions, parties, or anyone with a love for abundant ice cream.</li>
+                                    </ul>
+                                </li>
+                                <li>1000ml
+                                    <ul>
+                                        <li>description: the largest option, perfect for significant celebrations.</li>
+                                        <li>serving: a container with a capacity of 1000ml.</li>
+                                        <li>ideal for: large parties, birthdays, or any grand celebration.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in the freezer for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>store in the freezer to maintain the ice cream's texture and flavor.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Creamy Ice Cream Delight is thoughtfully packaged, ready to bring joy to your dessert moments or make a delightful gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateFlavour()">
+            <p>ice-cream</p>
+            <h1>flavoured ice-cream</h1>
+            <h2>RM<span id="price_iceCream_chocolate"></span></h2>
+            <h3>flavour</h3>
+            <div class="option-container">
+                <input type="radio" id="chocolate_iceCream_chocolate" value="chocolate" name="flavour">
+                <label for="chocolate_iceCream_chocolate">chocolate</label>
+                <input type="radio" id="matcha_iceCream_chocolate" value="match" name="flavour">
+                <label for="matcha_iceCream_chocolate">match</label>
+                <input type="radio" id="mint_iceCream_chocolate" value="mint" name="flavour">
+                <label for="mint_iceCream_chocolate">mint</label>
+                <input type="radio" id="strawberry_iceCream_chocolate" value="strawberry" name="flavour">
+                <label for="strawberry_iceCream_chocolate">strawberry</label>
+                <input type="radio" id="vanilla_iceCream_chocolate" value="vanilla" name="flavour">
+                <label for="vanilla_iceCream_chocolate">vanilla</label>
+            </div>
+            <h3>weight</h3>
+            <div class="option-container">
+                <input type="radio" id="130ml_iceCream_chocolate" value="ml130" name="size" onchange="updatePrice('iceCream_chocolate')">
+                <label for="130ml_iceCream_chocolate">130ml</label>
+                <input type="radio" id="290ml_iceCream_chocolate" value="ml290" name="size" onchange="updatePrice('iceCream_chocolate')">
+                <label for="290ml_iceCream_chocolate">290ml</label>
+                <input type="radio" id="500ml_iceCream_chocolate" value="ml500" name="size" onchange="updatePrice('iceCream_chocolate')">
+                <label for="500ml_iceCream_chocolate">500ml</label>
+                <input type="radio" id="725ml_iceCream_chocolate" value="ml725" name="size" onchange="updatePrice('iceCream_chocolate')">
+                <label for="725ml_iceCream_chocolate">725ml</label>
+                <input type="radio" id="1000ml_iceCream_chocolate" value="ml1000" name="size" onchange="updatePrice('iceCream_chocolate')">
+                <label for="1000ml_iceCream_chocolate">1000ml</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_flavour">**please choose a flavour</p>
+            <p id="invalid_size">**please choose a weight</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+    <div id="footer">
+
+    </div>
+    
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="./home.html"><img src="./source/nav-logo.png" class="nav-logo"></a>
+        </div>
+        <ul class="links">
+            <li class="tabs"><a href="./home.html#about-us">about</a></li>
+            <li class="tabs"><a href="./catalogue.html">products</a></li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('cakes')">cakes</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('cookies')">cookies</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('tarts')">tarts</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('ice-cream')">ice-cream</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('pastries')">pastries</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('dessert-cups')">dessert cups</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('cupcakes')">cupcakes</li>
+            <li class="hyperlinks-sorted-products medium-vp tabs" onclick="filterCategory('macaroons')">macaroons</li>
+            <li class="tabs"><a href="./contact.html">contact</a></li>
+            <li><img src="./source/user.png" class="icon" onclick="showLoginWindow(); showLogin()"></a></li>
+            <li><img src="./source/shopping-cart.png" class="icon cart-button"></li>
+        </ul>
+        <div class="dropdown-button">
+            <img src="./source/menu-burger.png" class="icon" id="dropdown-icon">
+        </div>
+    </div>
+
+    <div class="dropdown-menu">
+        <ul class="dropdown-content">
+            <li><a href="#">about</a></li>
+            <li><a href="./catalogue.html">products</a></li>
+            <li><a onclick="filterCategory('cakes')">cakes</a></li>
+            <li><a onclick="filterCategory('cookies')">cookies</a></li>
+            <li><a onclick="filterCategory('tarts')">tarts</a></li>
+            <li><a onclick="filterCategory('ice-cream')">ice-cream</a></li>
+            <li><a onclick="filterCategory('pastries')">pastries</a></li>
+            <li><a onclick="filterCategory('dessert-cups')">dessert cups</a></li>
+            <li><a onclick="filterCategory('cupcakes')">cupcakes</a></li>
+            <li><a onclick="filterCategory('macaroons')">macaroons</a></li>
+            <li><a href="./contact.html">contact</a></li>
+            <li><a onclick="showLoginWindow(); showLogin()">profile</a></li>
+            <li><a class="cart-button">shopping cart</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-cart">
+        <div class="cart-content">
+            <table>
+                <tr class="bottom-line top-line">
+                    <th><div class="box">product</div></th>
+                    <th><div class="box">flavour</div></th>
+                    <th><div class="box">shape</div></th>
+                    <th><div class="box">size</div></th>
+                    <th><div class="box">price</div></th>
+                    <th><div class="box">quantity</div></th>
+                    <th><div class="box">total</div></th>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <div class="empty-container">
+                            <div class="empty">
+                                <img src="./source/empty-cart.png" class="empty-cart-icon">
+                                your cart is empty! 
+                                <a href="./catalogue.html">shop now</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="top-line">
+                    <td colspan="5"></td>
+                    <th colspan="2" class="thin-bottom"><div class="box">subtotal</div></td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <th colspan="2"><div class="box">delivery fees</div></th>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                    <th colspan="2" class="double-line"><div class="box">grand total</div></th>
+                </tr>
+            </table>
+            <div class="sticky-buttons">
+                <a><img src="./source/cross.png" class="icon" id="closeCartBtn"></a>
+                <div class="checkOut" onclick="alert('This is just a dummy check out shopping cart button. \nThe feature will be ready soon!')">
+                    check out
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="login-register-window">
+        <div id="login-register-container">
+            <div id="login-container">
+                <div class="cross-icon">
+                    <img src="./source/cross.png" class="icon" onclick="hideLoginWindow()">
+                </div>
+                <div class="center-container">
+                    <h1>welcome to <span class="brand-name">sweet bear!</span></h1>
+                    <h2> - satisfying your sweet tooth, one treat at a time at sweet bear -</h2>
+                    <form method="get" class="userinput-container" onsubmit="return validateLogin()">
+                        <div class="left-container">
+                            <div class="ques-container">
+                                <p>email address</p>
+                                <input type="email" label="email" class="userinput" id="login_email">
+                                <p id="login_invalid_email">**please enter a valid email address</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>password</p>
+                                <input type="password" label="password" class="userinput" id="login_password">
+                                <p id="login_invalid_password">**please enter a valid password</p>
+                            </div> 
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" value="submit button" class="login-button">log in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom-container">
+                    <p>new to sweet bear? <a onclick="showRegister()">join now</a></p>
+                </div>
+            </div>
+            <div id="register-container">
+                <div class="cross-icon">
+                    <img src="./source/cross.png" class="icon" onclick="hideLoginWindow()">
+                </div>
+                <div class="center-container">
+                    <h1>join the <span class="brand-name">sweet bear!</span></h1>
+                    <h2> - unlock the magic of sweet moments -</h2>
+                    <form method="get" class="userinput-container" onsubmit="return validateSignup()">
+                        <div class="left-container">
+                            <div class="ques-container">
+                                <p>first name</p>
+                                <input type="name" label="first-name" class="userinput" id="signup_firstname">
+                                <p id="signup_invalid_firstname">**please enter a valid firstname</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>last name</p>
+                                <input type="name" label="last-name" class="userinput" id="signup_lastname">
+                                <p id="signup_invalid_lastname">**please enter a valid lastname</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>email address</p>
+                                <input type="email" label="email" class="userinput" id="signup_email">
+                                <p id="signup_invalid_email">**please enter a valid email address</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>date of birth</p>
+                                <input type="date" label="dob" class="userinput" id="signup_dob">
+                                <p id="signup_invalid_dob">**please select your date of birth</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>gender</p>
+                                <select size="1" label="gender" class="userinput" id="signup_gender">
+                                    <option value="select">Select your gender</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                </select>
+                                <p id="signup_invalid_gender">**please select your gender</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>phone number</p>
+                                <input type="tel" lbale="phone-number" class="userinput" id="signup_phone">
+                                <p id="signup_invalid_phone">**please enter a valid phone number</p>
+                            </div>
+                            <div class="ques-container">
+                                <p>password</p>
+                                <input type="password" label="password" class="userinput" id="signup_password">
+                                <p id="signup_invalid_password">**please enter a valid password</p>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" value="submit button" class="login-button">create an accont</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom-container">
+                    <p>already have an account? <a onclick="showLogin()">sign in</a></p>
+                </div>
+            </div>
+            <div class="logo-container">
+                <img src="./source/logo.png" class="logo"> 
+            </div>
+        </div>
+    </div>
+
+    <div class="products-cover-container">
+        <h1>all goods we served</h1>
+    </div>
+
+    <div class="sorting-function">
+        <div class="search-container">
+            <img src="./source/search.png" class="icon">
+            <input type="text" name="search" class="search-bar" onclick="alert('This is just a dummy search bar, this feature will be ready soon!')">
+        </div>
+        <div class="categories">
+            <p>categories</p>
+            <div class="horizontal-slide-bar">
+                <ul class="products-slide-bar">
+                    <li>
+                        <img src="./source/products/all.JPG" class="products-img" onclick="filterCategory('all')">
+                        <p class="products-name">all<p>
+                    </li>
+                    <li>
+                        <img src="./source/products/strawberry-cake.JPG" class="products-img" onclick="filterCategory('cakes')">
+                        <p class="products-name">cakes<p>
+                    </li>
+                    <li>
+                        <img src="./source/products/chocolate-chip-cookie.JPG" class="products-img" onclick="filterCategory('cookies')">
+                        <p class="products-name">cookies</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/fruit-tarts.JPG" class="products-img" onclick="filterCategory('tarts')">
+                        <p class="products-name">tarts</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/ice-cream-chocolate.JPG" class="products-img" onclick="filterCategory('ice-cream')">
+                        <p class="products-name">ice-cream</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/croissants.JPG" class="products-img" onclick="filterCategory('pastries')">
+                        <p class="products-name">pastries</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/tiramisu.JPG" class="products-img" onclick="filterCategory('dessert-cups')">
+                        <p class="products-name">dessert cups</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/frosted-cupcake.JPG" class="products-img" onclick="filterCategory('cupcakes')">
+                        <p class="products-name">cup cakes</p>
+                    </li>
+                    <li>
+                        <img src="./source/products/macaroons.JPG" class="products-img" onclick="filterCategory('macaroons')">
+                        <p class="products-name">macaroons</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="products-container small-vp" id="cakes">
+            <div class="text">
+                <p>cakes</p>
+                - slices of delight, moments of joy -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/black-forest.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">black forest cake</p></li>
+                        <li><p class="products-price">from rm<span id="price_blackForest"></span></p></li>
+                        <li><a href="./blackForest.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/red-velvet.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">red velvet cake</p></li>
+                        <li><p class="products-price">from rm<span id="price_redVelvet"></span></p></li>
+                        <li><a href="./redVelvet.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/fruit-cake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">fruit cake</p></li>
+                        <li><p class="products-price">from rm<span id="price_fruitCake"></span></p></li>
+                        <li><a href="./fruitCake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/cheesecake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">cheesecake</p></li>
+                        <li><p class="products-price">from rm<span id="price_cheesecake"></span></p></li>
+                        <li><a href="./cheesecake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/opera-cake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">opera cake</p></li>
+                        <li><p class="products-price">from rm<span id="price_operaCake"></span></p></li>
+                        <li><a href="./operaCake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/strawberry-cake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">strawberry cake</p></li>
+                        <li><p class="products-price">from rm<span id="price_strawberryCake"></span></p></li>
+                        <li><a href="./strawberryCake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="cookies">
+            <div class="text">
+                <p>cookies</p>
+                - dunk into delight, bite by bite -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/chocolate-chip-cookie.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">chocolate chip cookie</p></li>
+                        <li><p class="products-price">from rm<span id="price_chocolateChipCookie"></span></p></li>
+                        <li><a href="./chocolateChipCookie.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/icing-cookie.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">icing cookie</p></li>
+                        <li><p class="products-price">from rm<span id="price_icingCookie"></span></p></li>
+                        <li><a href="./icingCookie.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/oatmeal-cookie.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">oatmeal cookie</p></li>
+                        <li><p class="products-price">from rm<span id="price_oatmealCookie"></span></p></li>
+                        <li><a href="./oatmealCookie.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="tarts">
+            <div class="text">
+                <p>tarts</p>
+                - tantalize your taste buds with tarts perfection" -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/fruit-tarts.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">fruit tarts</p></li>
+                        <li><p class="products-price">from rm<span id="price_fruitTart"></span></p></li>
+                        <li><a href="./fruitTart.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/chocolate-tart.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">chocolate tart</p></li>
+                        <li><p class="products-price">from rm<span id="price_chocolateTart"></span></p></li>
+                        <li><a href="./chocolateTart.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="ice-cream">
+            <div class="text">
+                <p>ice-cream</p>
+                - melt away stress with our sweet scoops-
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/ice-cream-chocolate.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">chocolate ice-cream</p></li>
+                        <li><p class="products-price">from rm<span id="price_iceCream_chocolate"></span></p></li>
+                        <li><a href="./iceCream.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/ice-cream-mint.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">mint ice-cream</p></li>
+                        <li><p class="products-price">from rm<span id="price_iceCream_mint"></span></p></li>
+                        <li><a href="./iceCream.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/ice-cream-strawberry.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">strawberry ice-cream</p></li>
+                        <li><p class="products-price">from rm<span id="price_iceCream_strawberry"></span></p></li>
+                        <li><a href="./iceCream.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/ice-cream-vanilla.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">vanilla ice-cream</p></li>
+                        <li><p class="products-price">from rm<span id="price_iceCream_vanilla"></span></p></li>
+                        <li><a href="./iceCream.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/ice-cream-matcha.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">match ice-cream</p></li>
+                        <li><p class="products-price">from rm<span id="price_iceCream_matcha"></span></p></li>
+                        <li><a href="./iceCream.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="pastries">
+            <div class="text">
+                <p>pastries</p>
+                - elegance in each layer, sweetness in every bite" -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/cream-puff.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">cream puff</p></li>
+                        <li><p class="products-price">from rm<span id="price_creamPuff"></span></p></li>
+                        <li><a href="./creamPuff.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/croissants.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">crossaint</p></li>
+                        <li><p class="products-price">from rm<span id="price_crossaint"></span></p></li>
+                        <li><a href="./crossaint.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="dessert-cups">
+            <div class="text">
+                <p>dessert cups</p>
+                - indulgence, one portable cup at a time -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/tiramisu.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">tiramisu</p></li>
+                        <li><p class="products-price">from rm<span id="price_tiramisu"></span></p></li>
+                        <li><a href="./tiramisu.html" class="buy-now-button">buy now</a></li>              
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/chocolate-mousse.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">chocolate mousse</p></li>
+                        <li><p class="products-price">from rm<span id="price_chocolateMousse"></span></p></li>
+                        <li><a href="./chocolateMousse.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="cupcakes">
+            <div class="text">
+                <p>cupcakes</p>
+                - whisking up dreams, frosting up joy -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/hokkaido-cupcake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">hokkaido cupcake</p></li>
+                        <li><p class="products-price">from rm<span id="price_hokkaidoCupcake"></span></p></li>
+                        <li><a href="./hokkaidoCupcake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/frosted-cupcake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">frosted cupcake</p></li>
+                        <li><p class="products-price">from rm<span id="price_frostedCupcake"></span></p></li>
+                        <li><a href="./frostedCupcake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="./source/products/fruit-cupcake.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">fruit cupcake</p></li>
+                        <li><p class="products-price">from rm<span id="price_fruitCupcake"></span></p></li>
+                        <li><a href="./fruitCupcake.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+        <div class="products-container small-vp" id="macaroons">
+            <div class="text">
+                <p>macaroons</p>
+                - tiny crowns of sweet splender -
+            </div>
+            <ul class="products-with-price">
+                <li>
+                    <img src="./source/products/macaroons.JPG" class="products-img2">
+                    <ul class="products-details">
+                        <li><p class="products-name">macaroons</p></li>
+                        <li><p class="products-price">from rm<span id="price_macaroon"></span></p></li>
+                        <li><a href="./macaroon.html" class="buy-now-button">buy now</a></li>
+                    </ul>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+    <footer>
+        <div class="container1">
+            <div class="social-media-container">
+                <ul class="icon">
+                    <li>
+                        <a><img src="./source/facebook.png" class="social-media-icon"></a>
+                    </li>
+                    <li>
+                        <a><img src="./source/instagram.png" class="social-media-icon"></a>
+                    </li>
+                    <li>
+                        <a><img src="./source/google.png" class="social-media-icon"></a>
+                    </li>
+                </ul>
+                <div class="text">
+                    connect with dessert lovers!
+                </div>
+            </div>
+
+            <div class="logo-container">
+                <img src="./source/nav-logo.png" class="footer-logo">
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="site-map-container">
+                <p class="text"><b>learn more</b></p>
+                <ul class="hyperlinks">
+                    <li><a href="./home.html">home</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="#">about</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('cakes')">cakes</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./blackForest.html">black forest</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./redVelvet.html">red velvet</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitCake.html">fruit cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./cheesecake.html">cheesecake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./operaCake.html">opera cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./strawberryCake.html">strawberry cake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('cookies')">cookies</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./chocolateChipCookie.html">chocolate chip cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./icingCookie.html">icing cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./oatmealCookie.html">oatmeal cookie</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('tarts')">tarts</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitTart.html">fruit tart<a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./chocolateTart.html">chocolate tart</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('ice-cream')">ice-cream</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">chocolate</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">mint</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">strawberry</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">vanilla</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./iceCream.html">matcha</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('pastries')">pastries</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./creamPuff.html">cream puff</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./crossaint.html">croissants</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('dessert-cups')">dessert cups</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./tiramisu.html">tiramisu</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./chocolateMousse.html">chocolate mousse</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a onclick="filterCategory('cupcakes')">cup-cakes</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./hokkaidoCupcake.html">hokkaido cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./frostedCupcake.html">frosted cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li class="sub-hyperlinks"><a href="./fruitCupcake.html">fruit cupcake</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="./macaroon.html">macaroons</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                    <li><a href="./contact.html">contact</a>&nbsp<img src="./source/arrow-up-right.png" class="hyperlinks-icon"></li>
+                </ul>
+            </div>
+
+            <div class="contact-container">
+                <div class="address-container">
+                    <p class="text"><b>address</b></p>
+                    <div class="details-container">
+                        5, Jalan Universiti<br>Bandar Sunway<br>47500 Petaling Jaya, Selangor<br>Malaysia
+                    </div>
+                </div>
+                <div class="business-hour-container">
+                    <p class="text"><b>business hour</b></p>
+                    <div class="time-container">
+                        <div class="time">
+                            mon-fri<br>sat-sun
+                        </div>
+                        <div class="time">
+                            10:00am - 08:00pm<br>08:00am - 10:00pm
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us-container">
+                    <p class="text"><b>contact us</b></p>
+                    <div class="contacts">
+                        <ul class="phone-mail">
+                            <li>
+                                <img src="./source/phone.png" class="icon">
+                                012-3456789
+                            </li>
+                            <li>    
+                                <img src="./source/mail.png" class="icon">
+                                sweet.bear@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container3">
+            <div class="dates">
+                <p>creation date: 25-10-2023</p>
+                <p>last updated: <span id=last_updated></span></p>
+                <p>last data collection: <span id="date_collect">-</span></p>
+            </div>
+            <div class="copyright-container">
+                Copyright &copy; 2023 SweetBear. all copyright served.
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

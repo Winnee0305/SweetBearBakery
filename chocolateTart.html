@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+    
+    </div>
+
+    <div class="item-container" id="chocolateTart">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/chocolate-tart.JPG" id="expandedImg_chocolateTart" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/chocolate-tart.JPG" class="thumbnail" onclick="expandImg(this, 'chocolateTart')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_chocolateTart" onclick="showTab('about', this, 'chocolateTart')">about</h1>
+                    <h1 id="ingredientTab_chocolateTart" onclick="showTab('ingredient', this, 'chocolateTart')">ingredients</h1>
+                    <h1 id="detailsTab_chocolateTart" onclick="showTab('details', this, 'chocolateTart')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_chocolateTart">
+                        <p><span class="about-main">Decadent Chocolate Tart, </span>Experience the indulgence of our Decadent Chocolate Tart, a rich and velvety dessert that combines a buttery chocolate crust with a smooth chocolate ganache filling. Each bite is a journey into chocolate heaven, and whether you choose the mini, normal, or large size, our chocolate tarts are a celebration of pure cocoa bliss.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_chocolateTart">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Chocolate Crust: </span>A perfect blend of cocoa and butter for a decadent base.</li>
+                            <li><span class="ing">Chocolate Ganache: </span>A silky and rich filling made with premium chocolate.</li>
+                            <li><span class="ing">Butter: </span>High-quality butter for a tender and flavorful tart crust.</li>
+                            <li><span class="ing">Heavy Cream: </span>Brings a luxurious texture to the chocolate ganache.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Enhances the overall flavor with a touch of warmth.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_chocolateTart">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>mini
+                                    <ul>
+                                        <li>description: a petite delight, perfect for individual indulgence or sharing at gatherings.</li>
+                                        <li>serving: a mini-sized tart, approximately 4 inches in diameter.</li>
+                                        <li>ideal for: personal treats or as charming additions to dessert platters.</li>
+                                    </ul>
+                                </li>
+                                <li>normal
+                                    <ul>
+                                        <li>description: a standard-sized tart suitable for various occasions and gatherings.</li>
+                                        <li>serving: a regular-sized tart, approximately 8 inches in diameter.</li>
+                                        <li>ideal for: sharing with family and friends or as a delightful dessert centerpiece.</li>
+                                    </ul>
+                                </li>
+                                <li>large
+                                    <ul>
+                                        <li>description: an indulgent, larger tart perfect for celebrations and special events.</li>
+                                        <li>serving: a large-sized tart, approximately 12 inches in diameter.</li>
+                                        <li>ideal for: grand occasions, parties, or anyone with a love for abundant chocolate tarts.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; refrigerate for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>refrigerate to maintain the tart's freshness and the optimal texture of the chocolate ganache.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>our Decadent Chocolate Tart is beautifully presented, making it a delightful addition to any dessert table or a luxurious gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateSize()">
+            <p>tarts</p>
+            <h1>chocolate tart</h1>
+            <h2>RM<span id="price_chocolateTart"></span></h2>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="mini_chocolateTart" value="mini" name="size" onchange="updatePrice('chocolateTart')">
+                <label for="mini_chocolateTart">mini</label>
+                <input type="radio" id="normal_chocolateTart" value="normal" name="size" onchange="updatePrice('chocolateTart')">
+                <label for="normal_chocolateTart">normal</label>
+                <input type="radio" id="large_chocolateTart" value="large" name="size" onchange="updatePrice('chocolateTart')">
+                <label for="large_chocolateTart">large</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+
+   <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

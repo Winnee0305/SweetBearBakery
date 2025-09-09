@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+        
+    </div>
+
+    <div class="item-container" id="operaCake">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/opera-cake.JPG" id="expandedImg_operaCake" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/opera-cake.JPG" class="thumbnail" onclick="expandImg(this, 'operaCake')">
+                    <img src="./source/products/opera-cake2.JPG" class="thumbnail" onclick="expandImg(this, 'operaCake')">
+                    <img src="./source/products/opera-cake3.JPG" class="thumbnail" onclick="expandImg(this, 'operaCake')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_operaCake" onclick="showTab('about', this, 'operaCake')">about</h1>
+                    <h1 id="ingredientTab_operaCake" onclick="showTab('ingredient', this, 'operaCake')">ingredients</h1>
+                    <h1 id="detailsTab_operaCake" onclick="showTab('details', this, 'operaCake')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_operaCake">
+                        <p><span class="about-main">Opera Cake, </span>Indulge in the exquisite layers of our Opera Cake, a French classic that combines the richness of coffee-soaked almond sponge layers with smooth layers of chocolate and coffee-flavored buttercream. The result is a symphony of textures and flavors that dance on your palate, creating a truly luxurious experience. Elevate your dessert affair with the sophistication of our Opera Cake, a perfect blend of artistry and taste.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_operaCake">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">Almond Sponge Layers: </span>Light and airy layers with a hint of almond flavor.</li>
+                            <li><span class="ing">Chocolate Ganache: </span>Rich and velvety, adding a decadent chocolate layer.</li>
+                            <li><span class="ing">Coffee-Flavored Buttercream: </span>Smooth and flavorful, complementing the almond and chocolate layers.</li>
+                            <li><span class="ing">Coffee Syrup: </span>Infused into the almond sponge layers for a delightful coffee essence.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_operaCake">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>Size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>slice
+                                    <ul>
+                                        <li>description: a classic portion for a delightful taste of Opera Cake.</li>
+                                        <li>serving: a single slice of Opera Cake.</li>
+                                        <li>ideal for: those who prefer a moderate serving or want to sample multiple desserts.</li>
+                                    </ul>
+                                </li>
+                                <li>6-inch
+                                    <ul>
+                                        <li>description: a small cake size suitable for intimate gatherings.</li>
+                                        <li>serving: approximately 4-6 servings.</li>
+                                        <li>ideal for: small celebrations, family dinners, or as a gift.</li>
+                                    </ul>
+                                </li>
+                                <li>7-inch
+                                    <ul>
+                                        <li>description: a slightly larger cake, perfect for a small group.</li>
+                                        <li>serving: approximately 6-8 servings.</li>
+                                        <li>ideal for: small gatherings, birthdays, or special occasions with close friends.</li>
+                                    </ul>
+                                </li>
+                                <li>8-inch
+                                    <ul>
+                                        <li>description: a medium-sized cake for a moderate-sized gathering.</li>
+                                        <li>serving: approximately 8-10 servings.</li>
+                                        <li>ideal for: birthday parties, office celebrations, or family events.</li>
+                                    </ul>
+                                </li>
+                                <li>9-inch
+                                    <ul>
+                                        <li>description: a larger cake for a more significant gathering.</li>
+                                        <li>serving: approximately 10-12 servings.</li>
+                                        <li>ideal for: larger parties, anniversaries, or events with extended family and friends.</li>
+                                    </ul>
+                                </li>
+                                <li>10-inch
+                                    <ul>
+                                        <li>description: the largest option, perfect for bigger celebrations.</li>
+                                        <li>serving: approximately 12-14 servings.</li>
+                                        <li>ideal for: large parties, weddings, or any grand celebration.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in the refrigerator for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains almonds, dairy, and gluten. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>refrigerate to maintain the integrity of the layers and flavors.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>each Opera Cake is meticulously crafted and presented, making it a stunning centerpiece for any dessert table or a thoughtful gift for someone special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <form class="item-right-container" onsubmit="return validateShape()">
+            <p>cakes</p>
+            <h1>opera cake</h1>
+            <h2>RM<span id="price_operaCake"></span></h2>
+            <h3>shape</h3>
+            <div class="option-container">
+                <input type="radio" id="round_operaCake" value="round" name="shape">
+                <label for="round_operaCake">round</label>
+                <input type="radio" id="square_operaCake" value="square" name="shape">
+                <label for="square_operaCake">square</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="slice_operaCake" value="slice" name="size" onchange="updatePrice('operaCake')">
+                <label for="slice_operaCake">slice</label>
+                <input type="radio" id="6-inch_operaCake" value="inch6" name="size" onchange="updatePrice('operaCake')">
+                <label for="6-inch_operaCake">6-inch</label>
+                <input type="radio" id="7-inch_operaCake" value="inch7" name="size" onchange="updatePrice('operaCake')">
+                <label for="7-inch_operaCake">7-inch</label>
+                <input type="radio" id="8-inch_operaCake" value="inch8" name="size" onchange="updatePrice('operaCake')">
+                <label for="8-inch_operaCake">8-inch</label>
+                <input type="radio" id="9-inch_operaCake" value="inch9" name="size" onchange="updatePrice('operaCake')">
+                <label for="9-inch_operaCake">9-inch</label>
+                <input type="radio" id="10-inch_operaCake" value="inch10" name="size" onchange="updatePrice('operaCake')">
+                <label for="10-inch_operaCake">10-inch</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+            <p id="invalid_shape">**please choose a shape</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

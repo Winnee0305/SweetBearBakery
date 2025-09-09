@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Sweet Bear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="functionalities">
+        
+    </div>
+
+    <div class="item-container" id="redVelvet">
+        <div class="item-left-container">
+            <div class="item-img-container">
+                <div class="expand-container">
+                    <img src="./source/products/red-velvet.JPG" id="expandedImg_redVelvet" class="item-img">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="./source/products/red-velvet.JPG" class="thumbnail" onclick="expandImg(this, 'redVelvet')">
+                    <img src="./source/products/red-velvet2.JPG" class="thumbnail" onclick="expandImg(this, 'redVelvet')">
+                </div>
+            </div>
+            <div class="item-description">
+                <div class="tabs">
+                    <h1 class="about-tab" id="aboutTab_redVelvet" onclick="showTab('about', this, 'redVelvet')">about</h1>
+                    <h1 id="ingredientTab_redVelvet" onclick="showTab('ingredient', this, 'redVelvet')">ingredients</h1>
+                    <h1 id="detailsTab_redVelvet" onclick="showTab('details', this, 'redVelvet')">details</h1>
+                </div>
+                <div class="description">
+                    <div class="about" id="about_redVelvet">
+                        <p><span class="about-main">Divine Red Velvet Cake, </span>Savor the enchantment of our Divine Red Velvet Cake, a culinary masterpiece that effortlessly blends moist, crimson-hued layers with a luxurious cream cheese frosting. This iconic dessert is not just a treat for the taste buds but a visual feast that adds a touch of elegance to any celebration. Immerse yourself in the velvety goodness and heavenly sweetness of this timeless classic.</p>
+                    </div>
+                    <div class="ingredient" id="ingredient_redVelvet">
+                        <ul class="ingredient-list">
+                            <li><span class="ing">All-Purpose Flour: </span>Carefully sifted for a light and airy texture.</li>
+                            <li><span class="ing">Cocoa Powder: </span>Premium quality cocoa for that signature hint of chocolate.</li>
+                            <li><span class="ing">Unsalted Butter: </span>Rich and creamy, adding depth to the cake layers.</li>
+                            <li><span class="ing">Granulated Sugar: </span>The perfect sweetness to balance the cocoa flavor.</li>
+                            <li><span class="ing">Eggs: </span>Fresh and high-quality eggs for structure and moisture.</li>
+                            <li><span class="ing">Buttermilk: </span>Provides tenderness and a subtle tang to the cake.</li>
+                            <li><span class="ing">Baking Soda: </span>A leavening agent for that coveted rise and fluffiness.</li>
+                            <li><span class="ing">Vinegar: </span>Reacts with baking soda to enhance the cake's texture and color.</li>
+                            <li><span class="ing">Red Food Coloring: </span>Creates the iconic deep red hue of the cake.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Adds a touch of warmth and depth to the overall flavor.</li>
+                            <li><span class="ing">Cream Cheese Frosting: </span></li>
+                            <li><span class="ing">Cream Cheese: </span>Soft and velvety, the star of the luscious frosting.</li>
+                            <li><span class="ing">Powdered Sugar: </span>Sweetens and thickens the frosting to perfection.</li>
+                            <li><span class="ing">Unsalted Butter: </span>Enhances the creaminess and richness of the frosting.</li>
+                            <li><span class="ing">Vanilla Extract: </span>Infuses a delightful aroma into the frosting.</li>
+                        </ul>
+                    </div>
+                    <div class="details" id="details_redVelvet">
+                        <div class="details-box">
+                            <div class="heading">
+                                <h1>serving size</h1>
+                                <div class="line"></div>
+                            </div>
+                            <ol>
+                                <li>slice
+                                    <ul>
+                                        <li>description: a classic portion for a delightful taste of red velvet cake.</li>
+                                        <li>serving: a single slice of red velvet cake.</li>
+                                        <li>ideal for: those who prefer a moderate serving or want to sample multiple desserts.</li>
+                                    </ul>
+                                </li>
+                                <li>6-inch
+                                    <ul>
+                                        <li>description: a small cake size suitable for intimate gatherings.</li>
+                                        <li>serving: approximately 4-6 servings.</li>
+                                        <li>ideal for: small celebrations, family dinners, or as a gift.</li>
+                                    </ul>
+                                </li>
+                                <li>7-inch
+                                    <ul>
+                                        <li>description: a slightly larger cake, perfect for a small group.</li>
+                                        <li>serving: approximately 6-8 servings.</li>
+                                        <li>ideal for: small gatherings, birthdays, or special occasions with close friends.</li>
+                                    </ul>
+                                </li>
+                                <li>8-inch
+                                    <ul>
+                                        <li>description: a medium-sized cake for a moderate-sized gathering.</li>
+                                        <li>serving: approximately 8-10 servings.</li>
+                                        <li>ideal for: birthday parties, office celebrations, or family events.</li>
+                                    </ul>
+                                </li>
+                                <li>9-inch
+                                    <ul>
+                                        <li>description: a larger cake for a more significant gathering.</li>
+                                        <li>serving: approximately 10-12 servings.</li>
+                                        <li>ideal for: larger parties, anniversaries, or events with extended family and friends.</li>
+                                    </ul>
+                                </li>
+                                <li>10-inch
+                                    <ul>
+                                        <li>description: the largest option, perfect for bigger celebrations.</li>
+                                        <li>serving: approximately 12-14 servings.</li>
+                                        <li>ideal for: large parties, weddings, or any grand celebration.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <div class="heading">
+                                <h1>shelf life </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>best enjoyed fresh; store in the refrigerator for extended freshness.</p>
+                            <div class="heading">
+                                <h1>allergens</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>contains dairy and eggs. may contain traces of nuts.</p>
+                            <div class="heading">
+                                <h1>storage </h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>refrigerate to maintain the cream cheese frosting's consistency.</p>
+                            <div class="heading">
+                                <h1>presentation</h1>
+                                <div class="line"></div>
+                            </div>
+                            <p>each Divine Red Velvet Cake is meticulously crafted and adorned, making it a stunning centerpiece for birthdays, weddings, and special moments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="item-right-container" onsubmit="return validateShape()">
+            <p>cakes</p>
+            <h1>red velvet</h1>
+            <h2>RM<span id="price_redVelvet"></span></h2>
+            <h3>shape</h3>
+            <div class="option-container">
+                <input type="radio" id="round_redVelvet" value="round" name="shape">
+                <label for="round_redVelvet">round</label>
+                <input type="radio" id="square_redVelvet" value="square" name="shape">
+                <label for="square_redVelvet">square</label>
+            </div>
+            <h3>size</h3>
+            <div class="option-container">
+                <input type="radio" id="slice_redVelvet" value="slice" name="size" onchange="updatePrice('redVelvet')">
+                <label for="slice_redVelvet">slice</label>
+                <input type="radio" id="6-inch_redVelvet" value="inch6" name="size" onchange="updatePrice('redVelvet')">
+                <label for="6-inch_redVelvet">6-inch</label>
+                <input type="radio" id="7-inch_redVelvet" value="inch7" name="size" onchange="updatePrice('redVelvet')">
+                <label for="7-inch_redVelvet">7-inch</label>
+                <input type="radio" id="8-inch_redVelvet" value="inch8" name="size" onchange="updatePrice('redVelvet')">
+                <label for="8-inch_redVelvet">8-inch</label>
+                <input type="radio" id="9-inch_redVelvet" value="inch9" name="size" onchange="updatePrice('redVelvet')">
+                <label for="9-inch_redVelvet">9-inch</label>
+                <input type="radio" id="10-inch_redVelvet" value="inch10" name="size" onchange="updatePrice('redVelvet')">
+                <label for="10-inch_redVelvet">10-inch</label>
+            </div>
+            <div class="quantity-addCart">
+                <select size="1" label="quantity" class="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="add-to-cart" class="add-to-cart">add to cart</button>
+            </div>
+            <p id="invalid_size">**please choose a size</p>
+            <p id="invalid_shape">**please choose a shape</p>
+        </form>
+    </div>
+
+    <div class="recommendation-container">
+        <div class="recommendation small-vp">
+            <div class="text">
+                <p>discover more temptations: you might also like</p>
+                - satisfy your cravings with our top picks -
+            </div>
+            <ul class="products">
+                <li>
+                    <a href="./tiramisu.html"><img src="./source/products/tiramisu.JPG" class="products-img"></a>
+                    <p class="products-name">tiramisu</p>
+                </li>
+                <li>
+                    <a href="./creamPuff.html"><img src="./source/products/cream-puff.JPG" class="products-img"></a>
+                    <p class="products-name">cream puffs</p>
+                </li>
+            </ul>    
+        </div>
+    </div>
+    
+    <div id="footer">
+
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>
